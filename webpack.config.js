@@ -33,6 +33,13 @@ module.exports = {
     devServer: {
         hot: true
     },
+    // 在webpack和typescript都要配置模块解析
+    resolve: {
+        extensions: [".js", ".json", ".ts", ".tsx"],
+        alias: {
+            "components": path.resolve(__dirname, "./src/components")
+        }
+    },
     plugins: [
         new HtmlWebpackPlugin({
             title: "my_blog",

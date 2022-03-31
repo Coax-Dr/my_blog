@@ -1,3 +1,4 @@
 import React from "react";
 import ReactDOM from "react-dom";
-ReactDOM.render((<div>123</div>), document.getElementById("root"));
+import Home from "./home";
+ReactDOM.render(<Home />, document.getElementById("root"));
