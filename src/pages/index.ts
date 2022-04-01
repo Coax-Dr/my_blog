@@ -1,9 +1,9 @@
 import Home from "./home";
 import Record from "./record";
-import Other from "./other";
+import Login from "./login";
 
 export {
   Home,
   Record,
-  Other
+  Login
 }

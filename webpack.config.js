@@ -28,6 +28,19 @@ module.exports = {
                 test: /\.tsx$/,
                 exclude: /node_modules/,
                 use: ["ts-loader"]
+            },
+            {
+                test: /\.(png|svg|jpe?g)$/,
+                type: "asset",
+                generator: {
+                    filename: "img/[name].[hash:6][ext]"
+                },
+                parser: {
+                    dataUrlCondition: {
+                        maxSize: 200 * 1024
+                        // 配置asset/inline解析资源的最大体积，大于这个体积就使用asset/resource打包
+                    }
+                }
             }
         ]
     },
@@ -36,7 +49,7 @@ module.exports = {
     },
     // 在webpack和typescript都要配置模块解析
     resolve: {
-        extensions: [".js", ".json", ".tsx", ".ts"],
+        extensions: [".js", ".json", ".tsx", ".ts", ".less"],
         alias: {
             "container": path.resolve(__dirname, "./src/container"),
             "pages": path.resolve(__dirname, "./src/pages"),

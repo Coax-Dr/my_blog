@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./index.less"
+import Avatar from "./avatar";
+import "./style"
 
 export interface HeadColProps {
     options: { name: string, path: string, key: string }[]
@@ -14,6 +15,7 @@ const HeadCol: React.FC<HeadColProps> = ({ options }) => {
                     <Link to={o.path}>{o.name}</Link>
                 </div>
             ))}
+            <Avatar />
         </div>
     );
 }
