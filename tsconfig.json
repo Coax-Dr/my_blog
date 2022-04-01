@@ -11,7 +11,7 @@
     "esModuleInterop": true,
     "baseUrl": "src",
     "paths": {
-      "components/*": ["components/*"],
+      "container/*": ["container/*"],
       "pages/*": ["pages/*"],
       "assets/*": ["assets/*"]
     }

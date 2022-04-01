@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { Home, Record, Other } from "pages";
-import { HeadCol } from "components";
+import { HeadCol } from "container";
 import { Routes, Route } from "react-router-dom";
 /**
  * 根组件
