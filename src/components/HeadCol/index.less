@@ -1,0 +1,11 @@
+// 响应式布局：不同的终端的浏览器访问相同的文件，通过css文件控制显示，以适应不同终端的屏幕 (随着手机终端的增加，重要)
+// 自适应布局：通过脚本检查屏幕尺寸，根据不同的尺寸访问特定的模板
+.head_row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+  &_col {
+    padding: 20px;
+  }
+}

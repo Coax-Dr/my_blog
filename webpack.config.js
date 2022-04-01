@@ -26,7 +26,8 @@ module.exports = {
             },
             {
                 test: /\.tsx$/,
-                use: ["awesome-typescript-loader"]
+                exclude: /node_modules/,
+                use: ["ts-loader"]
             }
         ]
     },
@@ -35,9 +36,11 @@ module.exports = {
     },
     // 在webpack和typescript都要配置模块解析
     resolve: {
-        extensions: [".js", ".json", ".ts", ".tsx"],
+        extensions: [".js", ".json", ".tsx", ".ts"],
         alias: {
-            "components": path.resolve(__dirname, "./src/components")
+            "components": path.resolve(__dirname, "./src/components"),
+            "pages": path.resolve(__dirname, "./src/pages"),
+            "assets": path.resolve(__dirname, "./src/assets")
         }
     },
     plugins: [
