@@ -14,7 +14,8 @@
       "container/*": ["container/*"],
       "pages/*": ["pages/*"],
       "assets/*": ["assets/*"]
-    }
+    },
+    "incremental": true
   },
   "include": [
     "./src/**/*"

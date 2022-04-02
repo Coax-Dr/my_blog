@@ -1,6 +1,6 @@
-import React, { Fragment } from "react";
-import { Home, Record, Login } from "pages";
 import { HeadCol } from "container";
+import React, { Fragment } from "react";
+import { Home, Record } from "pages";
 import { Routes, Route } from "react-router-dom";
 /**
  * 根组件
@@ -12,7 +12,6 @@ const Root: React.FC = () => {
       <Routes>
         <Route path={"/"} element={<Home />} />
         <Route path={"/record"} element={<Record />} />
-        <Route path={"/login"} element={<Login />} />
       </Routes>
     </Fragment>
   );
