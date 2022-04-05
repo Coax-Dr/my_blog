@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "./logo";
 import "./style"
 
 export interface HeadColProps {
@@ -11,7 +10,6 @@ const HeadCol: React.FC<HeadColProps> = ({ options }) => {
     return (
         <div className="head_row">
             {options.map(o => <div className="head_row_col" key={o.key}><Link to={o.path}>{o.name}</Link></div>)}
-            <Logo />
         </div>
     );
 }
