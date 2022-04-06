@@ -1,0 +1,28 @@
+.login_row {
+  @media screen and (min-width: 1600px) {
+    width: 15%;
+  }
+  @media screen and (max-width: 1600px) and (min-width: 1000px) {
+    width: 25%;
+  }
+
+  @media screen and (max-width: 1000px) and (min-width: 600px) {
+    width: 30%;
+  }
+
+  @media screen and (max-width: 600px) {
+    width: 50%;
+  }
+  height: 200px;
+  margin: 100px auto;
+  &_col {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    > button {
+      width: 100%;
+      cursor: pointer;
+    }
+  }
+}

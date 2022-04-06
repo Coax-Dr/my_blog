@@ -9,7 +9,7 @@ export interface HeadColProps {
 const HeadCol: React.FC<HeadColProps> = ({ options }) => {
     return (
         <div className="head_row">
-            {options.map(o => <div className="head_row_col" key={o.key}><Link to={o.path}>{o.name}</Link></div>)}
+            {options.map(o => <div className="head_row_col" key={o.key}><Link to={o.path} style={{ color: "#fff" }}>{o.name}</Link></div>)}
         </div>
     );
 }
