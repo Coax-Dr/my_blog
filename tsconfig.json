@@ -13,7 +13,8 @@
     "paths": {
       "container/*": ["container/*"],
       "pages/*": ["pages/*"],
-      "assets/*": ["assets/*"]
+      "assets/*": ["assets/*"],
+      "api/*": ["api/*"]
     },
     "incremental": true
   },

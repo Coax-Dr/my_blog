@@ -30,6 +30,11 @@ module.exports = {
                 use: ["ts-loader"]
             },
             {
+                test: /.ts$/,
+                use: ["ts-loader"],
+                exclude: /node_modules/,
+            },
+            {
                 test: /\.(png|svg|jpe?g)$/,
                 type: "asset",
                 generator: {
@@ -53,7 +58,8 @@ module.exports = {
         alias: {
             "container": path.resolve(__dirname, "./src/container"),
             "pages": path.resolve(__dirname, "./src/pages"),
-            "assets": path.resolve(__dirname, "./src/assets")
+            "assets": path.resolve(__dirname, "./src/assets"),
+            "api": path.resolve(__dirname, "./src/api")
         }
     },
     plugins: [
