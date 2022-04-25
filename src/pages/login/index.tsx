@@ -12,7 +12,13 @@ const Login = () => {
     const adminLogin = async (account: IAccount) => {
         try {
             // 管理员登录
-            await login(account);
+            const res = await login(account);
+            // 登录成功
+            if (res.ok) {
+                
+            } else {
+
+            }
         } catch (error) {
             console.log(error); 
         }

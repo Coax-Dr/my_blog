@@ -5,7 +5,7 @@ export interface IAccount {
     password: string;
 }
 
-const login = (search: IAccount) => axios.post("/api/admin/login", search);
+const login = (search: IAccount): Promise<{ ok: 0 | 1, [k:string]: any }> => axios.post("/api/admin/login", search);
 
 export {
     login
