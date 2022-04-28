@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { MyButton } from "components";
 import { login } from "api";
+import { Notify } from "uiw";
 import "./style.less";
 
 interface IAccount {
@@ -14,14 +15,11 @@ const Login = () => {
     const adminLogin = async (account: IAccount) => {
         try {
             // 管理员登录
-            setLoading(true);
-            const res = await login(account);
-            setLoading(false);
+            const { data } = await login(account);
             // 登录成功
-            if (res.ok) {
+            if (data.ok) {
                 
-            } else {
-
+            } else {    
             }
         } catch (error) {
             setLoading(false);
