@@ -12,6 +12,7 @@
     "baseUrl": "src",
     "paths": {
       "container/*": ["container/*"],
+      "components/*": ["components/*"],
       "pages/*": ["pages/*"],
       "assets/*": ["assets/*"],
       "api/*": ["api/*"]
