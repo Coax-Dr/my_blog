@@ -1,16 +1,19 @@
-import React, { useEffect } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
-import "./style.less";
+import { getUniquekey } from "utils";
+import MessageWrapper from "./messageWrapper";
 
-const modal = document.getElementById("#modal");
-
-const Message = () => {
-    const message = document.createElement("div");
-    message.className = "components_message";
-    message.innerText = "登陆失败";
-    useEffect(() => {
-    }, [])
-    ReactDOM.createPortal(message, modal);
-}
+const Message = (() => {
+    let modal = document.getElementById("modal");
+    const messageWrapper = ReactDOM.render(<MessageWrapper />, modal) as any;
+    return {
+        warn: (content: string) => {
+            messageWrapper.addMsg({
+                key: getUniquekey(),
+                content
+            })
+        }
+    }
+})();
 
 export default Message;

@@ -1,5 +1,15 @@
-.components_message {
-    position: fixed;
-    top: 10px;
-    left: 50%;
+.message_content {
+    animation: message 2s linear 1;
+}
+
+@keyframes message {
+    0%, 100% {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    5%, 95% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

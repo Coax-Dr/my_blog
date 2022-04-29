@@ -12,20 +12,22 @@ const Login = () => {
     const [account, setAccount] = useState<IAccount>(null);
     const [loading, setLoading] = useState<boolean>(false);
     const adminLogin = async (account: IAccount) => {
-        try {
-            // 管理员登录
-            const { data } = await login(account);
-            // 登录成功
-            if (data.ok) {
+        MyMessage.warn("登录失败")
+        // try {
+        //     // 管理员登录
+        //     const { data } = await login(account);
+        //     // 登录成功
+        //     if (data.ok) {
                 
-            } else {
-                console.log("执行");
-            }
-        } catch (error) {
-            setLoading(false); 
-            console.log(error); 
-        }
+        //     } else {
+        //         console.log("执行");
+        //     }
+        // } catch (error) {
+        //     setLoading(false); 
+        //     console.log(error); 
+        // }
     }
+
     return (
         <div className="login_row">
             <React.Fragment>
