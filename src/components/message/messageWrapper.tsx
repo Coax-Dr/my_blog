@@ -21,21 +21,18 @@ class MessageWrapper extends React.Component {
   /**
    * 添加消息
    */
-  addMsg = debounce((add: IMessage) => this.setState({ msgList: this.state.msgList.concat(add) }), 2000);
+  addMsg = (add: IMessage) => this.setState({ msgList: this.state.msgList.concat(add) });
 
   /**
    * 删除消息
    */
-  delMsg = (key: IMessage["key"]) => {
-    console.log("删除", key);
-    this.setState({ msgList: this.state.msgList.filter(m => m.key !== key) });
-  }
+  delMsg = (key: IMessage["key"]) => this.setState({ msgList: this.state.msgList.filter(m => m.key !== key) });
+
   render () {
     const { msgList } = this.state;
-    console.log("msgList", msgList)
     return (
       <React.Fragment>
-        {msgList.map(m => <MessageContent content={m.content} type={m.type} onDel={() => this.delMsg(m.key)} />)}
+        {msgList.map(m => <MessageContent key={m.key} content={m.content} type={m.type} onDel={() => this.delMsg(m.key)} />)}
       </React.Fragment>
     )
   }
