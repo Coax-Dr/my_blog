@@ -1,5 +1,5 @@
-import HeadCol from "./HeadCol";
+import RouteLink from "./RouteLink";
 
 export {
-    HeadCol
+    RouteLink
 }
